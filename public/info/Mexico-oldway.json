@@ -1,0 +1,33 @@
+{
+  "info": {
+    "texto": "México es una de las selecciones más fuertes y constantes de la región de CONCACAF. Se caracteriza por su juego dinámico, velocidad por las bandas y buen manejo del balón. Ha sido anfitrión del Mundial en 1970 y 1986, y será coanfitrión en 2026.",
+    "imagen": "/images/Mexico.png"
+  },
+  "trivia": [
+    {
+      "pregunta": "¿En qué año ganó México su primer Mundial Sub-17?",
+      "opciones": ["1999", "2005", "2011", "1986"],
+      "correcta": "2005"
+    },
+    {
+      "pregunta": "¿Cuál es el estadio histórico donde jugará como anfitrión?",
+      "opciones": ["Estadio Akron", "Estadio BBVA", "Estadio Azteca", "Estadio Jalisco"],
+      "correcta": "Estadio Azteca"
+    },
+    {
+      "pregunta": "¿Quién es el máximo goleador histórico del Tri en Mundiales?",
+      "opciones": [
+        "Cuauhtémoc Blanco",
+        "Luis Hernández",
+        "Javier “Chicharito” Hernández",
+        "Jared Borgetti"
+      ],
+      "correcta": "Javier “Chicharito” Hernández"
+    }
+  ],
+  "estadisticas": [
+    { "nombre": "Mejor resultado", "valor": "Cuartos de final (1970 y 1986)" },
+    { "nombre": "Ranking FIFA", "valor": "Top 15–20 aproximadamente" },
+    { "nombre": "Participaciones en la Copa Mundial", "valor": "17" }
+  ]
+}

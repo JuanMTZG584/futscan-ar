@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <title>FutScan</title>
+  <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body class="relative h-screen overflow-hidden flex flex-col">
+
+  <div id="app"></div>
+
+  <!-- BOTÓN TUTORIAL -->
+  <!-- <button id="tutorialBtn" class="fixed bottom-4 right-4 z-[9999] bg-[#17c755] text-white font-bold px-4 py-3 rounded-xl shadow-xl
+         hover:bg-[#4CAF50] hover:text-[#134e4a] transition">
+    Tutorial
+  </button> -->
+
+  <!-- MODAL -->
+  <div id="tutorialModal"
+    class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-[999999] p-4">
+
+    <div class="bg-[#134e4a]/95 backdrop-blur-md rounded-3xl p-5 sm:p-6 max-w-lg w-full max-h-[90vh] 
+              overflow-y-auto relative shadow-2xl border border-white/10">
+
+      <!-- BOTÓN CERRAR -->
+      <button id="closeTutorial" class="absolute top-4 right-4 text-[#4CAF50] text-lg font-bold 
+             hover:bg-[#4CAF50] hover:text-[#134e4a] rounded-full w-8 h-8 flex items-center justify-center transition">
+        ✕
+      </button>
+
+      <!-- TÍTULO -->
+      <h2 class="text-xl sm:text-2xl font-extrabold text-[#4CAF50] mb-4 text-center">
+        Tutorial AR
+      </h2>
+
+      <!-- TEXTO -->
+      <p class="mb-4 text-sm sm:text-base text-[#4CAF50]/90 text-center">
+        Presiona el botón de cámara y enfoca un escudo. Al detectarlo, aparecerán opciones para interactuar.
+      </p>
+
+      <!-- OPCIONES -->
+      <div class="grid grid-cols-2 gap-3 mb-5">
+        <button class="bg-[#4CAF50]/20 text-[#4CAF50] rounded-xl py-2 font-semibold 
+                     hover:bg-[#4CAF50] hover:text-[#134e4a] transition">
+          Información
+        </button>
+        <button class="bg-[#4CAF50]/20 text-[#4CAF50] rounded-xl py-2 font-semibold 
+                     hover:bg-[#4CAF50] hover:text-[#134e4a] transition">
+          Trivia
+        </button>
+        <button class="bg-[#4CAF50]/20 text-[#4CAF50] rounded-xl py-2 font-semibold 
+                     hover:bg-[#4CAF50] hover:text-[#134e4a] transition">
+          Estadísticas
+        </button>
+        <button class="bg-[#4CAF50]/20 text-[#4CAF50] rounded-xl py-2 font-semibold 
+                     hover:bg-[#4CAF50] hover:text-[#134e4a] transition">
+          Videos
+        </button>
+        <button class="bg-[#4CAF50]/20 text-[#4CAF50] rounded-xl py-2 font-semibold 
+                     hover:bg-[#4CAF50] hover:text-[#134e4a] transition col-span-2">
+          Imágenes
+        </button>
+      </div>
+
+      <!-- CONTROLES -->
+      <p class="mb-2 text-xs text-[#4CAF50]/80 text-center">
+        Controles del modelo
+      </p>
+
+      <div class="flex flex-wrap gap-2 justify-center">
+        <button class="bg-[#4CAF50]/10 text-[#4CAF50] rounded-full px-3 py-2 text-xs
+                     hover:bg-[#4CAF50] hover:text-[#134e4a] transition">
+          Movimiento
+        </button>
+        <button class="bg-[#4CAF50]/10 text-[#4CAF50] rounded-full px-3 py-2 text-xs
+                     hover:bg-[#4CAF50] hover:text-[#134e4a] transition">
+          Efectos
+        </button>
+      </div>
+
+      <!-- FOOTER TEXTO -->
+      <p class="mt-5 text-[11px] text-[#4CAF50]/60 text-center">
+        También puedes explorar desde el menú de selecciones.
+      </p>
+
+    </div>
+  </div>
+  <!-- NAVBAR -->
+  <header class="bg-[#134e4a] z-50 shadow-xl border-b border-white/10 ">
+
+    <nav class="flex items-center justify-between px-4 py-3">
+
+      <!-- IZQUIERDA -->
+      <button id="tutorialBtn" class="text-[#4CAF50] text-sm font-semibold px-3 py-1.5 rounded-full
+             active:bg-[#4CAF50] active:text-[#134e4a]
+             active:scale-95 transition">
+        Tutorial
+      </button>
+
+      <!-- CENTRO -->
+      <div class="flex items-center gap-2">
+        <span
+          class="px-4 py-1.5 bg-[#4CAF50] text-[#134e4a] font-extrabold text-lg tracking-wide rounded-full inline-block shadow-md">
+          FutScan
+        </span>
+      </div>
+
+      <!-- DERECHA -->
+      <button id="seleccionesBtn" class="text-[#4CAF50] text-sm font-semibold px-3 py-1.5 rounded-full
+             active:bg-[#4CAF50] active:text-[#134e4a]
+             active:scale-95 transition">
+        Selecciones
+      </button>
+
+    </nav>
+
+    <!-- MENÚ -->
+    <div id="seleccionesMenu" class="hidden absolute right-4 mt-2 w-56 
+         bg-[#134e4a]/95 backdrop-blur-md
+         rounded-2xl shadow-2xl py-2
+         text-[#4CAF50] z-[9999]
+         border border-white/10">
+    </div>
+
+  </header>
+
+  <!-- MAIN -->
+  <main class="flex-1 flex flex-col justify-between text-center px-6 py-6">
+
+    <section class="max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#134e4a] leading-tight">
+        Sitio web de experiencias en Realidad Aumentada
+      </h1>
+      <div class="mt-5 bg-[#134e4a] rounded-2xl px-5 py-4 shadow-xl">
+        <p class="text-sm sm:text-base text-[#4CAF50] leading-relaxed">
+          Vive una experiencia interactiva rumbo a la Copa Mundial de la FIFA 2026.
+          Explora contenido en AR utilizando las librerías
+          <span class="inline-flex items-center gap-1">
+            MindAR
+            <img src="/images/favicon.png" alt="MindAR" class="h-5 w-5">
+          </span>
+          y
+          <span class="inline-flex items-center gap-1">
+            Three.js
+            <img src="/images/Three.js_Icon.svg.png" alt="Three.js" class="h-5 w-5">
+          </span>.
+        </p>
+      </div>
+    </section>
+
+    <!-- BOTÓN AR -->
+    <div class="flex justify-center pb-4">
+      <button id="startAR" class="flex h-24 w-24 sm:h-28 sm:w-28
+           items-center justify-center
+           rounded-full bg-[#4CAF50] text-[#134e4a] shadow-2xl
+           transition-transform duration-200 ease-out
+           active:scale-95">
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.9" stroke="currentColor"
+          class="h-10 w-10 sm:h-12 sm:w-12">
+
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M6.75 7.5l1.5-2.25h7.5l1.5 2.25h2.25a.75.75 0 01.75.75v9a.75.75 0 01-.75.75H3a.75.75 0 01-.75-.75v-9a.75.75 0 01.75-.75h2.25z" />
+          <circle cx="12" cy="13" r="3.25" />
+
+        </svg>
+      </button>
+    </div>
+  </main>
+
+  <footer id="footerContent"  class="bg-[#134e4a] text-[#4CAF50] px-6 py-4">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+      <h2 class="text-sm font-bold">
+        Inicia tu experiencia AR
+      </h2>
+
+      <p class="text-xs mt-1 opacity-80">
+        Presiona el botón con el ícono de la cámara para comenzar
+      </p>
+    </div>
+
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/team-selection.js"></script>
+  <script>
+    const tutorialBtn = document.getElementById("tutorialBtn")
+    const tutorialModal = document.getElementById("tutorialModal")
+    const closeTutorial = document.getElementById("closeTutorial")
+
+    tutorialBtn.onclick = () => {
+      tutorialModal.classList.remove("hidden")
+      tutorialModal.classList.add("flex")
+    }
+
+    closeTutorial.onclick = () => {
+      tutorialModal.classList.add("hidden")
+      tutorialModal.classList.remove("flex")
+    }
+
+    tutorialModal.addEventListener("click", (e) => {
+      if (e.target === tutorialModal) {
+        tutorialModal.classList.add("hidden")
+        tutorialModal.classList.remove("flex")
+      }
+    })
+  </script>
+
+</body>
+
+</html>

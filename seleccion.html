@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selección</title>
+  <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 h-screen overflow-auto flex flex-col">
+  <header class="bg-[#134e4a] z-50 shadow-md border-b border-white/10">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 relative">
+
+      <!-- LOGO -->
+      <div class="flex items-center gap-2">
+        <span
+          class="px-4 py-1.5 bg-[#4CAF50] text-[#134e4a] font-extrabold text-lg tracking-wide rounded-full inline-block shadow-md">
+          FutScan
+        </span>
+      </div>
+
+      <!-- NAV DESKTOP -->
+      <div class="hidden md:flex gap-5 font-semibold" id="seccionesNav">
+        <button class="nav-item text-[#4CAF50] px-3 py-1 rounded-full 
+                     bg-[#4CAF50]/20
+                     hover:bg-[#4CAF50] hover:text-[#134e4a]
+                     active:scale-95 transition">
+          Información
+        </button>
+
+        <button class="nav-item text-[#4CAF50] px-3 py-1 rounded-full
+                     hover:bg-[#4CAF50] hover:text-[#134e4a]
+                     active:scale-95 transition">
+          Trivia
+        </button>
+
+        <button class="nav-item text-[#4CAF50] px-3 py-1 rounded-full
+                     hover:bg-[#4CAF50] hover:text-[#134e4a]
+                     active:scale-95 transition">
+          Imágenes
+        </button>
+
+        <button class="nav-item text-[#4CAF50] px-3 py-1 rounded-full
+                     hover:bg-[#4CAF50] hover:text-[#134e4a]
+                     active:scale-95 transition">
+          Videos
+        </button>
+
+        <button class="nav-item text-[#4CAF50] px-3 py-1 rounded-full
+                     hover:bg-[#4CAF50] hover:text-[#134e4a]
+                     active:scale-95 transition">
+          Estadísticas
+        </button>
+      </div>
+
+      <!-- REGRESAR -->
+      <a href="index.html" class="hidden md:block text-[#4CAF50] font-semibold px-3 py-1 rounded-full
+             hover:bg-[#4CAF50] hover:text-[#134e4a]
+             active:scale-95 transition">
+        Regresar
+      </a>
+
+      <!-- BOTÓN MOBILE -->
+      <button id="mobileMenuBtn" class="md:hidden text-[#4CAF50] text-xl font-bold px-3 py-1 rounded-full
+             hover:bg-[#4CAF50] hover:text-[#134e4a] transition">
+        ☰
+      </button>
+
+      <!-- MENU MOBILE -->
+      <div id="mobileMenu" class="hidden absolute right-6 top-16 w-60 
+             bg-[#134e4a]/95 backdrop-blur-md
+             rounded-2xl shadow-2xl py-3 text-[#4CAF50] 
+             border border-white/10 z-[9999] md:hidden">
+      </div>
+
+    </nav>
+  </header>
+  <main class="flex-1 flex flex-col items-center justify-start text-center px-6 pt-6 space-y-8">
+
+    <h1 id="nombreSeleccion" class="text-4xl font-extrabold text-[#134e4a] mb-6">Selección</h1>
+
+    <!-- INFORMACIÓN -->
+    <section id="seccionInformacion" class="w-full max-w-3xl hidden flex-col items-center">
+      <div class="bg-[#134e4a] border border-[#4CAF50]/30 rounded-xl px-4 py-2 shadow-md inline-block mb-4">
+        <h2 class="text-[#4CAF50] font-bold text-xl">
+          Información
+        </h2>
+      </div>
+
+      <div class="bg-[#134e4a] shadow-lg rounded-xl p-6 flex flex-col md:flex-row items-center gap-6 w-full">
+        <img src="/src/placeholder.png" alt="Imagen de la selección" class="w-48 h-48 object-cover rounded-lg" />
+
+        <p class="text-[#4CAF50] text-base md:text-lg text-left flex-1">
+          Aquí irá la información de la selección.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- TRIVIA -->
+    <section id="seccionTrivia" class="w-full max-w-3xl hidden flex-col items-center">
+      <div class="bg-[#134e4a] border border-[#4CAF50]/30 rounded-xl px-4 py-2 shadow-md inline-block mb-4">
+        <h2 class="text-[#4CAF50] font-bold text-xl">
+          Trivia
+        </h2>
+      </div>
+      <div class="flex flex-col gap-6"></div>
+    </section>
+
+    <!-- IMÁGENES -->
+    <section id="seccionImagenes" class="w-full max-w-4xl hidden flex-col items-center">
+      <div class="bg-[#134e4a] border border-[#4CAF50]/30 rounded-xl px-4 py-2 shadow-md inline-block mb-4">
+        <h2 class="text-[#4CAF50] font-bold text-xl">
+          Imágenes
+        </h2>
+      </div>
+
+      <div class="grid  gap-4 w-full">
+
+        <img src="/images/placeholder1.jpg"
+          class="rounded-xl shadow-md hover:scale-105 transition object-cover w-full h-48">
+
+        <img src="/images/placeholder2.jpg"
+          class="rounded-xl shadow-md hover:scale-105 transition object-cover w-full h-48">
+
+        <img src="/images/placeholder3.jpg"
+          class="rounded-xl shadow-md hover:scale-105 transition object-cover w-full h-48">
+
+      </div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="seccionVideos" class="w-full max-w-3xl hidden flex-col items-center">
+      <div class="bg-[#134e4a] border border-[#4CAF50]/30 rounded-xl px-4 py-2 shadow-md inline-block mb-4">
+        <h2 class="text-[#4CAF50] font-bold text-xl">
+          Videos
+        </h2>
+      </div>
+
+      <div class="bg-[#134e4a] shadow-lg rounded-xl p-4 w-full text-center">
+
+        <div class="flex gap-2 justify-center mb-3">
+          <button onclick="setVideo(1,this)" class="video-btn 
+  bg-[#4CAF50]/10 text-[#4CAF50]
+  px-3 py-1.5 rounded-full
+  font-semibold
+  hover:bg-[#4CAF50] hover:text-[#134e4a]
+  transition">Video 1</button>
+          <button onclick="setVideo(2,this)" class="video-btn 
+  bg-[#4CAF50]/10 text-[#4CAF50]
+  px-3 py-1.5 rounded-full
+  font-semibold
+  hover:bg-[#4CAF50] hover:text-[#134e4a]
+  transition">Video 2</button>
+        </div>
+
+        <video id="video" crossorigin="anonymous" preload="metadata" playsinline class="hidden">
+        </video>
+        <div id="videoLoader" class="hidden fixed inset-0 z-[9999] flex items-center justify-center bg-black/50">
+          <div class="w-16 h-16 border-4 border-[#4CAF50] border-t-transparent rounded-full animate-spin"></div>
+        </div>
+
+        <canvas id="canvas" class="w-full max-w-xl mx-auto rounded"></canvas>
+
+
+        <div class="mt-4 flex flex-wrap gap-2 justify-center">
+
+          <button onclick="playVideo()" class="px-4 py-2 rounded-full font-semibold
+           bg-[#4CAF50] text-[#134e4a]
+           hover:scale-105 active:scale-95
+           transition shadow-md">
+            Reproducir
+          </button>
+
+          <button onclick="restartVideo()" class="px-4 py-2 rounded-full font-semibold
+           bg-[#4CAF50]/20 text-[#4CAF50]
+           hover:bg-[#4CAF50] hover:text-[#134e4a]
+           active:scale-95 transition">
+            Reiniciar
+          </button>
+
+        </div>
+
+
+        <div class="mt-4 flex flex-wrap gap-2 justify-center">
+
+          <button onclick="setFilter(0,this)" class="filter-btn px-3 py-1.5 rounded-full font-semibold
+           bg-[#4CAF50]/10 text-[#4CAF50]
+           hover:bg-[#4CAF50] hover:text-[#134e4a]
+           active:scale-95 transition">
+            Normal
+          </button>
+
+          <button onclick="setFilter(1,this)" class="filter-btn px-3 py-1.5 rounded-full font-semibold
+           bg-[#4CAF50]/10 text-[#4CAF50]
+           hover:bg-[#4CAF50] hover:text-[#134e4a]
+           active:scale-95 transition">
+            Pixelado
+          </button>
+
+          <button onclick="setFilter(2,this)" class="filter-btn px-3 py-1.5 rounded-full font-semibold
+           bg-[#4CAF50]/10 text-[#4CAF50]
+           hover:bg-[#4CAF50] hover:text-[#134e4a]
+           active:scale-95 transition">
+            Blur
+          </button>
+
+          <button onclick="setFilter(3,this)" class="filter-btn px-3 py-1.5 rounded-full font-semibold
+           bg-[#4CAF50]/10 text-[#4CAF50]
+           hover:bg-[#4CAF50] hover:text-[#134e4a]
+           active:scale-95 transition">
+            Térmica
+          </button>
+
+          <button onclick="setFilter(4,this)" class="filter-btn px-3 py-1.5 rounded-full font-semibold
+           bg-[#4CAF50]/10 text-[#4CAF50]
+           hover:bg-[#4CAF50] hover:text-[#134e4a]
+           active:scale-95 transition">
+            VHS
+          </button>
+
+        </div>
+
+
+        <p class="mt-4 text-[#4CAF50] font-semibold text-center">
+          Intensidad
+        </p>
+
+        <input id="intensity" type="range" min="1" max="100" value="30" class="w-full max-w-xs mx-auto block mt-2
+         accent-[#4CAF50]">
+      </div>
+
+    </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section id="seccionEstadisticas" class="w-full max-w-3xl hidden flex-col items-center">
+      <div class="bg-[#134e4a] border border-[#4CAF50]/30 rounded-xl px-4 py-2 shadow-md inline-block mb-4">
+        <h2 class="text-[#4CAF50] font-bold text-xl">
+          Estadísticas
+        </h2>
+      </div>
+
+      <div class="grid  gap-4 w-full">
+
+        <div class="bg-white shadow-md rounded-xl p-4 text-gray-700 font-semibold">
+          Goles anotados: --
+        </div>
+
+        <div class="bg-white shadow-md rounded-xl p-4 text-gray-700 font-semibold">
+          Partidos jugados: --
+        </div>
+
+        <div class="bg-white shadow-md rounded-xl p-4 text-gray-700 font-semibold">
+          Victorias: --
+        </div>
+
+        <div class="bg-white shadow-md rounded-xl p-4 text-gray-700 font-semibold">
+          Derrotas: --
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/src/team-skeleton.js" type="module"></script>
+
+</body>
+
+</html>

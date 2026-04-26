@@ -1,0 +1,16 @@
+AR experiences scanner prototype for the 2026 FIFA World Cup 
+using HTML, TailwindCSS and JS, with MindAR & ThreeJS libraries.
+
+To Run:
+    (npm install)*
+
+    npm run dev -- --host
+    ngrok http 5173 / cloudflared tunnel --url http://localhost:5173 (or the port configured)
+
+NOTES:
+    To run the project make sure to use node v20.20.0. (via nvm or any other option) 
+    Node v22 LTS does not have the binaries required to work with ThreeJS & MindAR libraries.
+
+    In case of failure due to the host not being allowed (on mobile),
+    add the new ngrok or cloudflared URL provided to the vite.config.js file 
+    replacing the existant value on the allowedHosts field.
