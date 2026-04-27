@@ -7,7 +7,7 @@ export default defineConfig({
   ],
   server: {
     host: true,
-    allowedHosts: ['sloane-orthostichous-saul.ngrok-free.dev', 'publisher-august-marion-substance.trycloudflare.com']
+    allowedHosts: ['sloane-orthostichous-saul.ngrok-free.dev', 'apollo-separated-elements-link.trycloudflare.com']
   }
   
 })

@@ -20,7 +20,7 @@ async function cargarSelecciones() {
 
         setTimeout(() => {
           window.location.href =
-            `seleccion.html?nombre=${encodeURIComponent(nombre)}`
+            `/seleccion.html?nombre=${encodeURIComponent(nombre)}`
         }, 150)
       }
 

@@ -195,7 +195,7 @@ transition
 
     if (option === "Quiero ver imágenes") {
       const imagesLink = document.createElement("a")
-      imagesLink.href = `seleccion.html?nombre=${teamNameMap[currentTeam]}&seccion=Imágenes`
+      imagesLink.href = `/seleccion.html?nombre=${teamNameMap[currentTeam]}&seccion=Imágenes`
       imagesLink.innerText = "Ir a Imágenes"
       imagesLink.className = `
 block text-center py-3 rounded-xl
@@ -262,7 +262,7 @@ transition
 
     if (option === "Muéstrame videos relacionados") {
       const videoLink = document.createElement("a")
-      videoLink.href = `seleccion.html?nombre=${teamNameMap[currentTeam]}&seccion=Videos`
+      videoLink.href = `/seleccion.html?nombre=${teamNameMap[currentTeam]}&seccion=Videos`
       videoLink.innerText = "Ir a Videos"
       videoLink.className = `
 block text-center py-3 rounded-xl
